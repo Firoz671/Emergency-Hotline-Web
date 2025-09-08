@@ -2,7 +2,7 @@
 function getActionBtn(id) {
   return document.getElementById(id);
 }
-
+//Heart count
 function trigHeart(iconId, countId) {
   const heartIcon = document.getElementById(iconId);
   const heartCountEl = getActionBtn(countId);
@@ -26,15 +26,12 @@ function trigHeart(iconId, countId) {
     isFavorited = !isFavorited; 
   });
 }
-
-
-
 for (let i = 1; i <= 9; i++) {
     trigHeart(`heartIcon${i}`,'heartCount');
   }
 
 
-
+// History
 
 document.addEventListener("DOMContentLoaded", () => {
   const creditAmountEl = getActionBtn('credit-amount');
@@ -85,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
+//Copy
   const copyCountBtn = getActionBtn('copyCount') 
 
   const cardCopyButtons = document.querySelectorAll('.copyBtn');
@@ -105,13 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //Clear History
   const clearBtn = getActionBtn('clearBtn');
-  
   const historyContainer = getActionBtn('history-container');
   
-  // Add click event
   clearBtn.addEventListener('click', () => {
-    historyContainer.innerHTML = ''; // clears all history items
+    historyContainer.innerHTML = ''; 
   });
 
 
